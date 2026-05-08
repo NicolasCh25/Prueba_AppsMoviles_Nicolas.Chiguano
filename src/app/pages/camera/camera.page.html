@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-title>
+      Cámara
+    </ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-button
+    expand="block"
+    (click)="addPhoto()">
+
+    Tomar Foto
+
+  </ion-button>
+
+  <br>
+
+  <div *ngFor="let photo of photoService.photos">
+
+    <ion-img
+      [src]="photo.webviewPath">
+
+    </ion-img>
+
+    <br>
+
+  </div>
+
+</ion-content>

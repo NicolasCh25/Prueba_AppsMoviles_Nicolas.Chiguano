@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Detalle
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngIf="movie">
+
+  <img
+    [src]="imageUrl + movie.poster_path"
+  />
+
+  <h1>
+    {{movie.title}}
+  </h1>
+
+  <p>
+    {{movie.overview}}
+  </p>
+
+  <p>
+    ⭐ {{movie.vote_average}}
+  </p>
+
+  <p>
+    Fecha:
+    {{movie.release_date}}
+  </p>
+
+</ion-content>
